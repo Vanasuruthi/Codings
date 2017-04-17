@@ -3,6 +3,7 @@ public class ConcatLargestInteger
 {
     public static void main(String args[])throws IOException
     {
+        String finalInteger=" ";
         DataInputStream d=new DataInputStream(System.in);
         System.out.println("Enter Array Length:\n");
         int n=Integer.parseInt(d.readLine());
@@ -25,6 +26,7 @@ public class ConcatLargestInteger
                 largeRem=largest % 10;
                 large=largeRem % 10;
             }
+            finalInteger=finalInteger+toString(largest);
         }
     }
 }
