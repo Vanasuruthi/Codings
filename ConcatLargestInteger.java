@@ -4,10 +4,12 @@ public class ConcatLargestInteger
     public static void main(String args[])throws IOException
     {
         String finalInteger=" ";
+        int largeRem=0,numRem=0;
         DataInputStream d=new DataInputStream(System.in);
         System.out.println("Enter Array Length:\n");
         int n=Integer.parseInt(d.readLine());
-        int array=new int[n];
+        System.out.println("Enter Array:\n");
+        int[] array=new int[n];
         for(int i=0; i<n; i++)
         {
             array[i]=Integer.parseInt(d.readLine());
