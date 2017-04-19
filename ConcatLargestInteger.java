@@ -4,7 +4,7 @@ public class ConcatLargestInteger
     public static void main(String args[])throws IOException
     {
         String finalInteger=" ";
-        int largeRem=0,numRem=0;
+        int largeRem=0,numRem=0,temp=0,num,large,largest;
         DataInputStream d=new DataInputStream(System.in);
         System.out.println("Enter Array Length:\n");
         int n=Integer.parseInt(d.readLine());
@@ -14,22 +14,30 @@ public class ConcatLargestInteger
         {
             array[i]=Integer.parseInt(d.readLine());
         }
-        int largest=array[0];
-        for(int i=1; i<n; i++)
+        for (int i=0; i<n; i++)
         {
-            int num=array[i]/10;
-            int large=largest/10;
-            while(num > 0 && large >0)
+            for(int j=i+1; j<n; j++)
             {
-                if(num > large)
-                largest=array[i];
-                numRem=num % 10;
-                num=numRem/10;
-                largeRem=largest % 10;
-                large=largeRem % 10;
+                num=array[j]/10;
+                largest=array[i]/10;
+                while(num > 0 && largest >0)
+                {
+                    if(num > largest)
+                    {
+                        temp=array[i];
+                        array[i]=array[j];
+                        array[j]=temp;
+                        break;
+                    }
+                    else if(num==largest)
+                    {
+                    numRem=num % 10;
+                    num=numRem/10;
+                    largeRem=largest % 10;
+                    large=largeRem / 10;
+                    }
+                }
             }
-            finalInteger=finalInteger+Integer.toString(largest);
         }
-        System.out.println(finalInteger);
     }
 }
