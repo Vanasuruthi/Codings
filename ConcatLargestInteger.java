@@ -28,7 +28,8 @@ public class ConcatLargestInteger
                 largeRem=largest % 10;
                 large=largeRem % 10;
             }
-            finalInteger=finalInteger+toString(largest);
+            finalInteger=finalInteger+Integer.toString(largest);
         }
+        System.out.println(finalInteger);
     }
 }
