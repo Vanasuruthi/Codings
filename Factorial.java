@@ -7,7 +7,7 @@ public class Factorial
     DataInputStream d =new DataInputStream(System.in);
     System.out.println("Enter a Number:\n");
     int n=Integer.parseInt(d.readLine());
-    for(int i=n; i>=1; i++)
+    for(int i=n; i>=1; i--)
     {
         fact=fact*i;
     }
