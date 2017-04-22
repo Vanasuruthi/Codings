@@ -7,7 +7,7 @@ public class UniqueInteger
         DataInputStream d =new DataInputStream(System.in);
         System.out.println("Enter size:\n");
         int n=Integer.parseInt(d.readLine());
-        int[] a=new a[n];
+        int[] a=new int[n];
         for(int i=0; i<n; i++)
         {
            for(int j=i+1; j<n; j++)
