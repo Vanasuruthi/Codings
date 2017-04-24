@@ -7,9 +7,15 @@ public class RemoveDuplicate
         String str=d.readLine();
         char[] c=new char[];
         c=str.toCharArray();
-        for(int i=0; i<c.length; i++)
+        for(int i=0; i<c.length(); i++)
         {
-            
+            for(int j=0, j<c.length(); i++)
+            {
+                if(i!=j && a[i] == a[j])
+                {
+                    
+                }
+            }
         }
     }
 }
